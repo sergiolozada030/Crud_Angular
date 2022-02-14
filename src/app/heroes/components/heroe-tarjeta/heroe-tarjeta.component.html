@@ -23,8 +23,20 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-stroked-button color="primary">Ver más</button>
-      <button mat-stroked-button color="accent">Editar</button>
+      <button
+        mat-stroked-button
+        color="primary"
+        [routerLink]="['/heroes', heroe.id]"
+      >
+        Ver más
+      </button>
+      <button
+        mat-stroked-button
+        color="accent"
+        [routerLink]="['/heroes/editar', heroe.id]"
+      >
+        Editar
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>

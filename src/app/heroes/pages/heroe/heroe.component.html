@@ -1,1 +1,24 @@
-<p>heroe works!</p>
+<div class="contendeor__spiner" *ngIf="!heroe; else divHeroe">
+  <mat-spinner></mat-spinner>
+</div>
+
+<ng-template #divHeroe>
+  <!-- <h1>{{ heroe | json }}</h1> -->
+  <div class="contendorPerfil">
+    <div class="contendorPerfil_imagen">
+      <img [src]="heroe | imagen" alt="" />
+    </div>
+    <div class="contendorPerfil_info">
+      <h1>{{ heroe.superhero }}</h1>
+      <p>
+        <strong>Editorial: </strong>{{ heroe.publisher }} <br />
+        <strong>Primera aparición: </strong>{{ heroe.first_appearance }} <br />
+        <strong>Personajes: </strong>{{ heroe.characters }}
+      </p>
+
+      <button mat-stroked-button color="warn" (click)="regresar()">
+        Regresar
+      </button>
+    </div>
+  </div>
+</ng-template>
