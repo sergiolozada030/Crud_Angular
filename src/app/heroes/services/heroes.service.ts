@@ -16,7 +16,13 @@ export class HeroesService {
     return this.http.get<Heroe[]>(`${this.baseUrl}/heroes`);
   }
 
-  getHeroePorId(id: string) {
+  getHeroePorId(id: string): Observable<Heroe> {
     return this.http.get<Heroe>(`${this.baseUrl}/heroes/${id}`);
+  }
+
+  getSugerencias(termino: string): Observable<Heroe[]> {
+    return this.http.get<Heroe[]>(
+      `${this.baseUrl}/heroes?q=${termino}&_limit=6`
+    );
   }
 }
