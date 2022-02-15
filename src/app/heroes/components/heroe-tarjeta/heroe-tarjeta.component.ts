@@ -7,7 +7,7 @@ import { Heroe } from '../../interfaces/heroe.interface';
   styleUrls: ['./heroe-tarjeta.component.css'],
 })
 export class HeroeTarjetaComponent implements OnInit {
-  @Input() listaDeHeroes: Heroe[] = [];
+  @Input() heroe!: Heroe;
   constructor() {}
 
   ngOnInit(): void {}

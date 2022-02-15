@@ -2,4 +2,8 @@
 <mat-divider></mat-divider>
 <br />
 
-<app-heroe-tarjeta [listaDeHeroes]="listaDeHeroes"></app-heroe-tarjeta>
+<div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="center">
+  <div fxFlex.gt-lg="18" *ngFor="let heroe of listaDeHeroes">
+    <app-heroe-tarjeta [heroe]="heroe"></app-heroe-tarjeta>
+  </div>
+</div>

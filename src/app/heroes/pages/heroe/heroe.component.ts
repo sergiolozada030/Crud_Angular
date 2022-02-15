@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Heroe } from '../../interfaces/heroe.interface';
 import { HeroesService } from '../../services/heroes.service';
 import { switchMap } from 'rxjs/operators';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-heroe',
@@ -15,7 +16,8 @@ export class HeroeComponent implements OnInit {
   constructor(
     private activateRoute: ActivatedRoute,
     private heroesService: HeroesService,
-    private router: Router
+    private router: Router,
+    private _location: Location
   ) {}
 
   ngOnInit(): void {
@@ -28,5 +30,9 @@ export class HeroeComponent implements OnInit {
 
   regresar() {
     this.router.navigate(['heroes/listado']);
+  }
+
+  goBack() {
+    this._location.back();
   }
 }
