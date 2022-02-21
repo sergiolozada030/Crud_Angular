@@ -17,7 +17,7 @@
       (optionSelected)="opcSelecionada($event)"
     >
       <mat-option *ngFor="let heroe of heroes" [value]="heroe">
-        {{ heroe.superhero }}
+        {{ heroe.superHero }}
       </mat-option>
       <mat-option *ngIf="mostrarError" style="color: #f44336">
         No se encontraron resultados para <b>{{ termino }}</b>
