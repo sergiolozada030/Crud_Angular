@@ -5,28 +5,28 @@
     <div fxLayout="row" fxLayoutGap="10px">
       <mat-form-field fxFlex="100">
         <mat-label>Super Heroe</mat-label>
-        <input matInput />
+        <input matInput [(ngModel)]="heroe.superHero" />
       </mat-form-field>
 
       <mat-form-field fxFlex="100">
         <mat-label>Alter Ego</mat-label>
-        <input matInput />
+        <input matInput [(ngModel)]="heroe.alter_ego" />
       </mat-form-field>
     </div>
 
     <mat-form-field>
       <mat-label>Primera Aparicion</mat-label>
-      <input matInput />
+      <input matInput [(ngModel)]="heroe.first_appearance" />
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Personajes</mat-label>
-      <input matInput />
+      <input matInput [(ngModel)]="heroe.characters" />
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Creador</mat-label>
-      <mat-select>
+      <mat-select [(ngModel)]="heroe.publisher">
         <mat-option
           [value]="publisher.id"
           *ngFor="let publisher of publishers"
@@ -37,10 +37,12 @@
 
     <mat-form-field>
       <mat-label>Url</mat-label>
-      <input matInput type="url" />
+      <input matInput type="url" [(ngModel)]="heroe.alt_img" />
     </mat-form-field>
 
-    <button mat-raised-button color="primary">Guardar</button>
+    <button mat-raised-button color="primary" (click)="agregarHeroe()">
+      Guardar
+    </button>
   </div>
   <div fxFlex="50">
     <img [src]="heroe | imagen" alt="" />
