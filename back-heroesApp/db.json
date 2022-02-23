@@ -9,7 +9,7 @@
   "heroes": [
     {
       "id": "dc-batman",
-      "superhero": "Batman",
+      "superHero": "Batman",
       "publisher": "DC Comics",
       "alter_ego": "Bruce Wayne",
       "first_appearance": "Detective Comics #27",
@@ -17,7 +17,7 @@
     },
     {
       "id": "dc-superman",
-      "superhero": "Superman",
+      "superHero": "Superman",
       "publisher": "DC Comics",
       "alter_ego": "Kal-El",
       "first_appearance": "Action Comics #1",
@@ -25,7 +25,7 @@
     },
     {
       "id": "dc-flash",
-      "superhero": "Flash",
+      "superHero": "Flash",
       "publisher": "DC Comics",
       "alter_ego": "Jay Garrick",
       "first_appearance": "Flash Comics #1",
@@ -33,7 +33,7 @@
     },
     {
       "id": "dc-green",
-      "superhero": "Green Lantern",
+      "superHero": "Green Lantern",
       "publisher": "DC Comics",
       "alter_ego": "Alan Scott",
       "first_appearance": "All-American Comics #16",
@@ -41,7 +41,7 @@
     },
     {
       "id": "dc-arrow",
-      "superhero": "Green Arrow",
+      "superHero": "Green Arrow",
       "publisher": "DC Comics",
       "alter_ego": "Oliver Queen",
       "first_appearance": "More Fun Comics #73",
@@ -49,7 +49,7 @@
     },
     {
       "id": "dc-wonder",
-      "superhero": "Wonder Woman",
+      "superHero": "Wonder Woman",
       "publisher": "DC Comics",
       "alter_ego": "Princess Diana",
       "first_appearance": "All Star Comics #8",
@@ -57,7 +57,7 @@
     },
     {
       "id": "dc-martian",
-      "superhero": "Martian Manhunter",
+      "superHero": "Martian Manhunter",
       "publisher": "DC Comics",
       "alter_ego": "J\"onn J\"onzz",
       "first_appearance": "Detective Comics #225",
@@ -65,7 +65,7 @@
     },
     {
       "id": "dc-robin",
-      "superhero": "Robin/Nightwing",
+      "superHero": "Robin/Nightwing",
       "publisher": "DC Comics",
       "alter_ego": "Dick Grayson",
       "first_appearance": "Detective Comics #38",
@@ -73,7 +73,7 @@
     },
     {
       "id": "dc-blue",
-      "superhero": "Blue Beetle",
+      "superHero": "Blue Beetle",
       "publisher": "DC Comics",
       "alter_ego": "Dan Garret",
       "first_appearance": "Mystery Men Comics #1",
@@ -81,7 +81,7 @@
     },
     {
       "id": "dc-black",
-      "superhero": "Black Canary",
+      "superHero": "Black Canary",
       "publisher": "DC Comics",
       "alter_ego": "Dinah Drake",
       "first_appearance": "Flash Comics #86",
@@ -89,7 +89,7 @@
     },
     {
       "id": "marvel-spider",
-      "superhero": "Spider Man",
+      "superHero": "Spider Man",
       "publisher": "Marvel Comics",
       "alter_ego": "Peter Parker",
       "first_appearance": "Amazing Fantasy #15",
@@ -97,7 +97,7 @@
     },
     {
       "id": "marvel-captain",
-      "superhero": "Captain America",
+      "superHero": "Captain America",
       "publisher": "Marvel Comics",
       "alter_ego": "Steve Rogers",
       "first_appearance": "Captain America Comics #1",
@@ -105,7 +105,7 @@
     },
     {
       "id": "marvel-iron",
-      "superhero": "Iron Man",
+      "superHero": "Iron Man",
       "publisher": "Marvel Comics",
       "alter_ego": "Tony Stark",
       "first_appearance": "Tales of Suspense #39",
@@ -113,7 +113,7 @@
     },
     {
       "id": "marvel-thor",
-      "superhero": "Thor",
+      "superHero": "Thor",
       "publisher": "Marvel Comics",
       "alter_ego": "Thor Odinson",
       "first_appearance": "Journey into Myster #83",
@@ -121,7 +121,7 @@
     },
     {
       "id": "marvel-hulk",
-      "superhero": "Hulk",
+      "superHero": "Hulk",
       "publisher": "Marvel Comics",
       "alter_ego": "Bruce Banner",
       "first_appearance": "The Incredible Hulk #1",
@@ -129,7 +129,7 @@
     },
     {
       "id": "marvel-wolverine",
-      "superhero": "Wolverine",
+      "superHero": "Wolverine",
       "publisher": "Marvel Comics",
       "alter_ego": "James Howlett",
       "first_appearance": "The Incredible Hulk #180",
@@ -137,7 +137,7 @@
     },
     {
       "id": "marvel-daredevil",
-      "superhero": "Daredevil",
+      "superHero": "Daredevil",
       "publisher": "Marvel Comics",
       "alter_ego": "Matthew Michael Murdock",
       "first_appearance": "Daredevil #1",
@@ -145,7 +145,7 @@
     },
     {
       "id": "marvel-hawkeye",
-      "superhero": "Hawkeye",
+      "superHero": "Hawkeye",
       "publisher": "Marvel Comics",
       "alter_ego": "Clinton Francis Barton",
       "first_appearance": "Tales of Suspense #57",
@@ -153,7 +153,7 @@
     },
     {
       "id": "marvel-cyclops",
-      "superhero": "Cyclops",
+      "superHero": "Cyclops",
       "publisher": "Marvel Comics",
       "alter_ego": "Scott Summers",
       "first_appearance": "X-Men #1",
@@ -161,7 +161,7 @@
     },
     {
       "id": "marvel-silver",
-      "superhero": "Silver Surfer",
+      "superHero": "Silver Surfer",
       "publisher": "Marvel Comics",
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",

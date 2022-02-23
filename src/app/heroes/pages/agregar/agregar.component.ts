@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Heroe, Publisher } from '../../interfaces/heroe.interface';
 import { HeroesService } from '../../services/heroes.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-agregar',
@@ -28,9 +29,19 @@ export class AgregarComponent implements OnInit {
     alt_img: '',
   };
 
-  constructor(private heroeServie: HeroesService) {}
+  constructor(
+    private heroeServie: HeroesService,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.activatedRoute.params.subscribe(({ id }) => {
+      console.log(id);
+      this.heroeServie
+        .getHeroePorId(id)
+        .subscribe((resp) => (this.heroe = resp));
+    });
+  }
 
   agregarHeroe() {
     if (this.heroe.superHero.trim().length === 0) {
