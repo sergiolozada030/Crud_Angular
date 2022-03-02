@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Heroe, Publisher } from '../../interfaces/heroe.interface';
 import { HeroesService } from '../../services/heroes.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-agregar',
@@ -29,26 +30,46 @@ export class AgregarComponent implements OnInit {
     alt_img: '',
   };
 
+  tituloPantalla: any;
+
   constructor(
     private heroeServie: HeroesService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(({ id }) => {
-      console.log(id);
-      this.heroeServie
-        .getHeroePorId(id)
-        .subscribe((resp) => (this.heroe = resp));
-    });
+    if (!this.router.url.includes('editar')) {
+      this.tituloPantalla = 'Crear ';
+      return;
+    }
+
+    this.activatedRoute.params
+      .pipe(switchMap(({ id }) => this.heroeServie.getHeroePorId(id)))
+      .subscribe((heroe) => {
+        this.heroe = heroe;
+        if (this.heroe.id) {
+          this.tituloPantalla = 'Editar ';
+        }
+      });
   }
 
-  agregarHeroe() {
+  guardar() {
     if (this.heroe.superHero.trim().length === 0) {
       return;
     }
-    this.heroeServie
-      .postAgregarHeroe(this.heroe)
-      .subscribe((resp) => console.table(this.heroe));
+    if (this.heroe.id) {
+      // Actualizar
+      this.heroeServie
+        .putActualizarHeroe(this.heroe)
+        .subscribe((heroe) => this.router.navigate(['heroes/listado']));
+    } else {
+      // Crear
+      this.heroeServie
+        .postAgregarHeroe(this.heroe)
+        .subscribe((heroe) =>
+          this.router.navigate(['heroes/editar', heroe.id])
+        );
+    }
   }
 }

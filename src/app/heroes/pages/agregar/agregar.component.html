@@ -1,4 +1,4 @@
-<h1>Agregar heroe</h1>
+<h1>{{ tituloPantalla }} heroe</h1>
 
 <div fxLayout="row" fxLayoutGap="40px">
   <div fxFlex="50" fxLayout="column">
@@ -40,7 +40,7 @@
       <input matInput type="url" [(ngModel)]="heroe.alt_img" />
     </mat-form-field>
 
-    <button mat-raised-button color="primary" (click)="agregarHeroe()">
+    <button mat-raised-button color="primary" (click)="guardar()">
       Guardar
     </button>
   </div>

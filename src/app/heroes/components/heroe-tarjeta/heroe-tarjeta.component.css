@@ -1,8 +1,13 @@
 .card-heroe {
   max-width: 300px;
+  max-height: auto;
   margin-top: 20px;
 }
 
 .avatar-header-image {
   background-size: cover;
+}
+
+.img {
+  cursor: pointer;
 }
