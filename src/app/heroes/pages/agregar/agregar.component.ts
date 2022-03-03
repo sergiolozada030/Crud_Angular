@@ -3,6 +3,9 @@ import { Heroe, Publisher } from '../../interfaces/heroe.interface';
 import { HeroesService } from '../../services/heroes.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmarComponent } from '../../components/confirmar/confirmar.component';
 
 @Component({
   selector: 'app-agregar',
@@ -30,17 +33,19 @@ export class AgregarComponent implements OnInit {
     alt_img: '',
   };
 
-  tituloPantalla: any;
+  editando: any;
 
   constructor(
     private heroeServie: HeroesService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private _snackBar: MatSnackBar,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
     if (!this.router.url.includes('editar')) {
-      this.tituloPantalla = 'Crear ';
+      this.editando = false;
       return;
     }
 
@@ -48,9 +53,7 @@ export class AgregarComponent implements OnInit {
       .pipe(switchMap(({ id }) => this.heroeServie.getHeroePorId(id)))
       .subscribe((heroe) => {
         this.heroe = heroe;
-        if (this.heroe.id) {
-          this.tituloPantalla = 'Editar ';
-        }
+        this.editando = true;
       });
   }
 
@@ -60,16 +63,37 @@ export class AgregarComponent implements OnInit {
     }
     if (this.heroe.id) {
       // Actualizar
-      this.heroeServie
-        .putActualizarHeroe(this.heroe)
-        .subscribe((heroe) => this.router.navigate(['heroes/listado']));
+      this.heroeServie.putActualizarHeroe(this.heroe).subscribe((heroe) => {
+        this.router.navigate(['heroes/listado']);
+        this.mostrarSnackBar('Informacion Actualizada');
+      });
     } else {
       // Crear
-      this.heroeServie
-        .postAgregarHeroe(this.heroe)
-        .subscribe((heroe) =>
-          this.router.navigate(['heroes/editar', heroe.id])
-        );
+      this.heroeServie.postAgregarHeroe(this.heroe).subscribe((heroe) => {
+        this.router.navigate(['heroes/editar', heroe.id]);
+        this.mostrarSnackBar('Heroe Creado Corretamente');
+      });
     }
+  }
+
+  eliminar() {
+    const dialogConfirmar = this.dialog.open(ConfirmarComponent);
+
+    dialogConfirmar.afterClosed().subscribe((resp) => {
+      if (!resp) {
+        return;
+      }
+
+      this.heroeServie.deleteHeroe(this.heroe.id!).subscribe((resp) => {
+        this.router.navigate(['heroes/listado']);
+      });
+    });
+    /*  */
+  }
+
+  mostrarSnackBar(mensaje: string) {
+    this._snackBar.open(mensaje, 'Close!', {
+      duration: 2500,
+    });
   }
 }

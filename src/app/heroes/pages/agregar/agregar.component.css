@@ -1,4 +1,9 @@
 img {
   max-width: 500px;
-  height: 800px;
+  height: 700px;
+  border-radius: 10px;
+}
+
+.btn-eliminar {
+  margin-top: 1rem;
 }

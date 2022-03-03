@@ -168,49 +168,31 @@
       "characters": "Norrin Radd"
     },
     {
-      "superHero": "James",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Rodriguez",
-      "first_appearance": "Envigado fc",
-      "characters": "El chahco",
-      "alt_img": "https://s.hs-data.com/bilder/spieler/gross/135062.jpg?fallback=png",
-      "id": "9P2FAYS"
-    },
-    {
-      "superHero": "Falcao",
-      "publisher": "DC Comics",
-      "alter_ego": "Rada",
-      "first_appearance": "porto",
-      "characters": "el tigre",
-      "alt_img": "",
-      "id": "7rGJ7Bx"
-    },
-    {
-      "superHero": "Thanos",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Malo",
-      "first_appearance": "Avenger",
-      "characters": "personaje malo",
-      "alt_img": "https://i.pinimg.com/736x/df/8d/b7/df8db77bab37df6a571ea44859620748.jpg",
-      "id": "grDHUMY"
-    },
-    {
       "superHero": "Radamel Falcao",
       "publisher": "Marvel Comics",
       "alter_ego": "El tigre",
       "first_appearance": "River Plate 2006",
-      "characters": "Futbolista",
-      "alt_img": "https://w0.peakpx.com/wallpaper/492/121/HD-wallpaper-radamel-falcao-arda-turan-drogba-fatih-terim-futbol-galatasaray-mostafa-mohamed-onyekuru-sneijder.jpg",
+      "characters": "Futbolista profeta",
+      "alt_img": "https://images.ole.com.ar/2021/08/31/hTGAaOsMN_720x0__1.jpg",
       "id": "wFsyO57"
     },
     {
-      "superHero": "Cristiano",
-      "publisher": "DC Comics",
-      "alter_ego": "El Bicho",
-      "first_appearance": "Sportin de lisboa",
+      "superHero": "Mantilla",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Jugador",
+      "first_appearance": "Atletico nacional",
+      "characters": "Jugador de futbol",
+      "alt_img": "https://scontent.feoh1-1.fna.fbcdn.net/v/t39.30808-6/275085188_5575166755833473_8351471173550990297_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=1GzDdWA8Z0gAX_Hem1p&_nc_ht=scontent.feoh1-1.fna&oh=00_AT9kAfxkcnhe9donM1yT6u33ydXHhagOO9A2Bo4BDhrc5Q&oe=62259543",
+      "id": "3chCMiS"
+    },
+    {
+      "superHero": "Rifle",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Andrade",
+      "first_appearance": "America",
       "characters": "Delantero",
-      "alt_img": "https://i.pinimg.com/736x/30/65/ba/3065baa066cf332bdebf83dd4a4169cf--ronaldo-celebration-cr-vs-messi.jpg",
-      "id": "KboTYoV"
+      "alt_img": "https://scontent.feoh1-1.fna.fbcdn.net/v/t39.30808-6/273676059_5578072475542901_367549091262410786_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=MPDU215ezQoAX__kjqt&_nc_ht=scontent.feoh1-1.fna&oh=00_AT96OY1VSPX4RLW6tMtm7rH-f4AY1X6wL_ZfzIoXtQil_w&oe=62261655",
+      "id": "9nG4fye"
     }
   ]
 }
