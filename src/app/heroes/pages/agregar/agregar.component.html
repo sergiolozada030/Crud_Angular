@@ -41,7 +41,7 @@
     </mat-form-field>
 
     <button mat-raised-button color="primary" (click)="guardar()">
-      Guardar
+      {{ editando ? "Actualizar" : "Guardar" }}
     </button>
     <button
       *ngIf="editando"

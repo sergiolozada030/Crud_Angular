@@ -85,12 +85,10 @@ export class AgregarComponent implements OnInit {
       if (!resp) {
         return;
       }
-
       this.heroeServie.deleteHeroe(this.heroe.id!).subscribe((resp) => {
         this.router.navigate(['heroes/listado']);
       });
     });
-    /*  */
   }
 
   mostrarSnackBar(mensaje: string) {
