@@ -77,7 +77,9 @@ export class AgregarComponent implements OnInit {
   }
 
   eliminar() {
-    const dialogConfirmar = this.dialog.open(ConfirmarComponent);
+    const dialogConfirmar = this.dialog.open(ConfirmarComponent, {
+      data: this.heroe,
+    });
 
     dialogConfirmar.afterClosed().subscribe((resp) => {
       if (!resp) {

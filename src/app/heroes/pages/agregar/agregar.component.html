@@ -1,7 +1,7 @@
 <h1>{{ editando ? "Editar" : "Crear" }} heroe</h1>
 
 <div fxLayout="row" fxLayoutGap="40px">
-  <div fxFlex="50" fxLayout="column">
+  <div fxFlex.gt-sm="50" fxFlex.lt-xl="100" fxLayout="column">
     <div fxLayout="row" fxLayoutGap="10px">
       <mat-form-field fxFlex="100">
         <mat-label>Super Heroe</mat-label>
@@ -53,7 +53,9 @@
       Eliminar
     </button>
   </div>
-  <div fxFlex="50">
+  <div fxFlex="50" class="img-rigth">
     <img [src]="heroe | imagen" alt="" />
   </div>
 </div>
+
+<div class="img-block"><img [src]="heroe | imagen" alt="" /></div>

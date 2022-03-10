@@ -7,3 +7,29 @@ img {
 .btn-eliminar {
   margin-top: 1rem;
 }
+
+@media (max-width: 900px) {
+  .img-rigth {
+    display: none;
+  }
+  .img-block {
+    display: block;
+    padding-top: 1rem;
+    text-align: center;
+  }
+  img {
+    max-width: 300px;
+    height: 400px;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  .img-block {
+    display: none;
+  }
+}
+
+.img-rigth {
+  padding-left: 1rem;
+}
