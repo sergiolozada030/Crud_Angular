@@ -1,9 +1,9 @@
 {
   "usuarios": [
     {
-      "id": 1,
-      "usuario": "John Doe",
-      "email": "john.due@gmail.com"
+      "id": 1, 
+      "usuario": "Sergio Perea",
+      "email": "sergio@gmail.com"
     }
   ],
   "heroes": [
@@ -175,6 +175,15 @@
       "characters": "Futbolista profeta",
       "alt_img": "https://images.ole.com.ar/2021/08/31/hTGAaOsMN_720x0__1.jpg",
       "id": "wFsyO57"
+    },
+    {
+      "superHero": "big ",
+      "publisher": "Marvel Comics",
+      "alter_ego": "hero",
+      "first_appearance": "2017",
+      "characters": "Heroe",
+      "alt_img": "https://controlpublicidad.com/uploads/2014/12/disney-060011.jpg",
+      "id": "QiaI4ar"
     }
   ]
 }
