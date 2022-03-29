@@ -29,10 +29,17 @@
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <button mat-button color="warn" (click)="logout()">
-      Logout
-      <mat-icon>logout</mat-icon>
-    </button>
+
+    <div class="usuario-sesion">
+      <p>
+        {{ auth.usuario }}
+      </p>
+      <mat-icon mat-list-icon>person</mat-icon>
+      <button mat-stroked-button color="warn" (click)="logout()">
+        Logout
+        <mat-icon>logout</mat-icon>
+      </button>
+    </div>
   </mat-toolbar>
 
   <div class="contenido">

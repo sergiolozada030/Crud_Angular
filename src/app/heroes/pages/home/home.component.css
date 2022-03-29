@@ -1,3 +1,18 @@
 .contenido {
   margin: 20px;
 }
+
+.usuario-sesion {
+  display: flex;
+  align-items: center;
+}
+
+.usuario-sesion p {
+  margin-right: 3px;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.usuario-sesion button {
+  margin-left: 1rem;
+}

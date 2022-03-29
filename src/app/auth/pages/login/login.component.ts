@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Auth } from '../../interfaces/auth.interface';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   ingresar() {
-    this.authService.login().subscribe((resp) => console.log(resp));
-    this.router.navigate(['heroes/listado']);
+    this.authService.login().subscribe((usuario: Auth) => {
+      console.log(usuario), this.router.navigate(['heroes/listado']);
+    });
   }
 }
