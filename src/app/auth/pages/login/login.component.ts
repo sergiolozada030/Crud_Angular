@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   ingresar() {
     this.authService.login().subscribe((usuario: Auth) => {
-      console.log(usuario), this.router.navigate(['heroes/listado']);
+      this.router.navigate(['heroes/listado']);
     });
   }
 }

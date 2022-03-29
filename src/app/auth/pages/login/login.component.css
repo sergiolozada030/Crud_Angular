@@ -1,2 +1,20 @@
+.contenedor-principal {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contenedor-login {
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  text-align: center;
 }
